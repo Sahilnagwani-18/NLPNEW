@@ -1,0 +1,17 @@
+// DFA for lowercase words
+digraph {
+	graph [rankdir=LR]
+	qE [color=lightcoral shape=circle style=filled]
+	q0 [color=lightblue shape=circle style=filled]
+	q1 [color=lightgreen shape=doublecircle style=filled]
+	"" [shape=none]
+	"" -> q0 [label=start]
+	q0 -> qE [label="	,
+,,,, ,!,\",#,$,..."]
+	q0 -> q1 [label="a,b,c,d,e,f,g,h,i,j,..."]
+	q1 -> qE [label="	,
+,,,, ,!,\",#,$,..."]
+	q1 -> q1 [label="a,b,c,d,e,f,g,h,i,j,..."]
+	qE -> qE [label="	,
+,,,, ,!,\",#,$,..."]
+}
